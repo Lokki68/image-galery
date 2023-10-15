@@ -60,32 +60,42 @@
 </div>
 
 <style>
-  .image {
-    width: 400px;
-    height: 250px;
-    margin: 5px;
-    object-fit: cover;
-  }
-  .photos {
-    display: flex;
-    flex-wrap: wrap;
-  }
   .container {
-    width: 1230px;
-    margin: 0 auto;
+    width: 100vw;
+    margin: 0;
+    padding: 10px;
   }
+
   .header {
     text-align: center;
     font-size: 20px;
   }
+
   .input {
     padding: 10px;
-    width: 400px;
+    width: auto;
     border-radius: 10px;
     outline: none;
     border: 1px solid gray;
     font-size: 20px;
   }
+
+  .photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .image {
+    width: 250px;
+    max-width: 400px;
+    height: 250px;
+    margin: 5px;
+    object-fit: cover;
+  }
+
   .button {
     padding: 10px;
     font-size: 20px;
@@ -96,6 +106,17 @@
     color: white;
   }
   .input-container {
-    margin-bottom: 40px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 15px 40px;
+  }
+
+  @media (min-width: 768px) {
+    .input-container {
+      flex-direction: row;
+    }
   }
 </style>
